@@ -1,0 +1,23 @@
+<div class="palette">
+  <div class="row">
+    <div class="col-xs-12 description">
+      <h3>{{ vm.palette.title }}</h3>
+      <p>{{ vm.palette.description }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <img ng-src="assets/images/{{ vm.palette.image}}" alt="{{ vm.palette.title }}">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 colors">
+      <div class="color" ng-style="{'width': 100/vm.palette.colors.length + '%'}" ng-repeat="color in vm.palette.colors">
+        <div class="the-background">
+          <div class="the-color" ng-style="{'background-color':color}" ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <color-picker ng-model="vm.newColor" event-api="vm.colorPickerEvents"></color-picker>
+</div>

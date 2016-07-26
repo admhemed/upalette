@@ -1,0 +1,44 @@
+.palette {
+  text-transform: capitalize;
+  color: #cb3837;
+  margin-bottom:50px;
+  &:after {
+    animation: cursor-blink 0.4s linear infinite;
+    color: #cb3837;
+  }
+  img{
+    max-height:50px;
+  }
+  .description{
+    height:130px;
+  }
+  .color{
+    float:left;
+    padding:4px;
+    .the-background{
+      background-image: url('../assets/images/color-bg.png');
+      border-radius:10px;
+      border:1px solid #9da0a4;
+      .the-color{
+        border-radius:10px;
+        height:30px;
+        width:100%;
+      }
+    }
+  }
+}
+
+@keyframes cursor-blink {
+  1% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
