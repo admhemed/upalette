@@ -1,0 +1,42 @@
+<div class="event-page">
+
+  <!-- Banner for event title, action buttons -->
+  <div class="banner">
+    <div class="container">
+
+      <h1 ng-bind="::$ctrl.event.label[0].value"></h1>
+
+    </div>
+  </div>
+
+
+
+  <!-- Main view. Contains event html and comments -->
+  <div class="container page">
+
+    <!-- Event's HTML & tags rendered here -->
+    <div class="row event-content">
+      <div class="col-xs-12">
+
+        <div ng-bind-html="::$ctrl.event.body"></div>
+
+        <ui-gmap-google-map center='$ctrl.map.center' zoom='$ctrl.map.zoom'>
+          <ui-gmap-marker coords="$ctrl.map.center"  idkey="0" ></ui-gmap-marker>
+        </ui-gmap-google-map>
+
+        <ul class="tag-list">
+          <li class="tag-default tag-pill tag-outline"
+            ng-repeat="tag in ::$ctrl.event.tagList">
+            {{ tag }}
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+</div>

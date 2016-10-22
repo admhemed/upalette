@@ -1,0 +1,20 @@
+<event-preview
+  event="event"
+  ng-repeat="event in $ctrl.list">
+</event-preview>
+
+<div class="event-preview"
+  ng-hide="!$ctrl.loading">
+  Loading events...
+</div>
+
+<div class="event-preview"
+  ng-show="!$ctrl.loading && !$ctrl.list.length">
+  No events are here... yet.
+</div>
+
+<list-pagination
+ total-pages="$ctrl.listConfig.totalPages"
+ current-page="$ctrl.listConfig.currentPage"
+ ng-hide="$ctrl.listConfig.totalPages <= 1">
+</list-pagination>

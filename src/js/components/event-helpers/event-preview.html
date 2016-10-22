@@ -1,0 +1,6 @@
+<div class="event-preview">
+  <a ui-sref="app.item({ id: $ctrl.event.id })" class="preview-link">
+    <h1 ng-bind="$ctrl.event.label[0].value"></h1>
+    <div ng-bind-html="$ctrl.event.body"></div>
+  </a>
+</div>

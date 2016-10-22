@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light">
+  <div class="container">
+
+    <a class="navbar-brand"
+      ui-sref="app.home"
+      ng-bind="::$ctrl.appName ">
+    </a>
+
+    <!-- Show this for logged out users -->
+    <ul show-authed="false"
+      class="nav navbar-nav pull-xs-right">
+
+      <li class="nav-item">
+        <a class="nav-link"
+          ui-sref-active="active"
+          ui-sref="app.home">
+          Home
+        </a>
+      </li>
+    </ul>
+
+
+  </div>
+</nav>
